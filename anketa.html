@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VECTOR | ЛОКАЛЬНЫЕ ТУРНИРЫ</title>
+    <link rel="stylesheet" href="astyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="images/logo_icon.jpg" alt="VECTOR Logo">
+            </div>
+            <span class="logo-text">VECTOR | <br>ЛОКАЛЬНЫЕ ТУРНИРЫ</span>
+        </div>
+        
+        <div class="header-right">
+            <div class="notification-bell">
+                <img src="images/icons8-уведомление-48.png" alt="Уведомления" class="bell-icon">
+                <span class="notification-counter"></span>
+            </div>      
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск">
+                <img src="images/icons8-лупа-48.png" alt="Поиск" class="search-icon">
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/icons8-главная-48.png" alt="Главная" class="nav-icon">
+                        <span>ГЛАВНАЯ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/icons8-рейтинг-48.png" alt="Статистика" class="nav-icon">
+                        <span>СТАТИСТИКА</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tourney.html">
+                        <img src="images/icons8-трофей-48.png" alt="Турниры" class="nav-icon">
+                        <span>ТУРНИРЫ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="info.html">
+                        <img src="images/icons8-информация-48.png" alt="Информация" class="nav-icon">
+                        <span>ИНФОРМАЦИЯ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/icons8_пользователь_мужчина_в_кружке_48.png" alt="Профиль" class="nav-icon">
+                        <span>ПРОФИЛЬ</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+          <h2 class="create_anketa-title">Создание анкеты</h2>
+       <section class="create_anketa-container">
+    <!-- Основной блок с шагами -->
+    <div class="create_anketa-section">
+        <div class="create_anketa">
+        <div class="steps">
+            <!-- Шаг 1: Выбор карты -->
+            <div class="step">
+                <h3 class="step-title">Выбор карты</h3>
+                <div class="options-grid">
+                    <button class="option-button active">Ущелье</button>
+                    <button class="option-button">Арам</button>
+                    <button class="option-button">ТФТ</button>
+                </div>
+            </div>
+            
+            <!-- Шаг 2: Выбор режима -->
+            <div class="step">
+                <h3 class="step-title">Выбор режима</h3>
+                 <div class="options-grid mode-options">
+                    <button class="option-button">1х1</button>
+                    <button class="option-button">2х2</button>
+                    <button class="option-button">3х3</button>
+                    <button class="option-button">5х5</button>
+                </div>
+            </div>
+            
+            <!-- Шаг 3: Выбор праймтайма -->
+            <div class="step">
+                <h3 class="step-title">Выбор праймтайма</h3>
+                <div class="options-flex">
+                    <button class="option-button wide">Выбор дней</button>
+                    <button class="option-button wide">Выбор времени</button>
+                </div>
+            </div>
+            </div>
+             </div>
+            
+            <button class="invite-button">Пригласить в команду</button>
+        </div>
+
+    <!-- Вторая секция (название команды и описание) -->
+    <section class="team-info-section">
+    <div class="input-field">
+        <label for="team-name">Название Команды</label>
+        <input type="text" id="team-name" class="team-input" placeholder="Введите название команды">
+    </div>
+
+    <div class="input-field">
+        <label for="team-description">Описание</label>
+        <textarea id="team-description" class="team-textarea" placeholder="Условия матча указывает игрок"></textarea>
+    </div>
+
+    <!-- Разделитель -->
+    <div class="divider"></div>
+
+    <button class="publish-button">Опубликовать</button>
+</section>
+</section>
+       
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-logo">
+                    <div class="logo-circle">
+                        <img src="images/logo_icon.jpg" alt="VECTOR Logo">
+                    </div>
+                </div>
+                <div class="links">
+                    <a href="#">Условия использования |</a>
+                    <a href="#"> Тех. поддержка |</a>
+                    <a href="#"> Реклама</a>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="images/telega.jpg" alt="Telegram"></a>
+                <a href="https://vk.com/xellkart" target="_blank" rel="noopener noreferrer"><img src="images/vk.jpg" alt="VK"></a>
+                <a href="#"><img src="images/ds.jpg" alt="Discord"></a>
+                <a href="#"><img src="images/youtube.jpg" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

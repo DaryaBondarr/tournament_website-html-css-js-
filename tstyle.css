@@ -1,0 +1,419 @@
+@font-face {
+    font-family: 'KyivType Titling';
+    src: url('fonts/KyivTypeTitling-Medium2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: 'KyivType Titling', Medium2;
+    background: url('images/background.jpg') no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #1a1a1a;
+    top: 0;         
+    left: 0;        
+    width: 98%;     
+    z-index: 1000;   /* Чтобы шапка была поверх других элементов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для красоты */
+}
+
+.logo-text {
+    font-size: 20px;
+}
+/* Обертка для элементов справа в шапке */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Стили для колокольчика */
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+}
+
+.bell-icon {
+    padding-right:130px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Обновленные стили для search-bar */
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px 35px 8px 15px;
+    font-family: 'KyivType Titling', Medium2;
+    font-size: 15px;
+    padding: 8px 35px 8px 15px; /* Увеличиваем правый отступ для иконки */
+    border: 1px solid #ffffff;
+    border-radius: 5px; 
+    background-color: #1a1a1a;
+    color: #ffffff;
+    width: 200px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    pointer-events: none; /* Чтобы клик по иконке не блокировал поле ввода */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Увеличиваем промежуток между пунктами */
+}
+
+nav li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    gap: 5px; /* Расстояние между иконкой и текстом */
+}
+/* Шрифт для заголовка */
+@font-face {
+    font-family: 'KyivType Titling Heavy';
+    src: url('fonts/KyivTypeTitling-Heavy3.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.steps-section {
+    padding: 100px;
+    margin: 30px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.steps-title {
+    font-family: 'KyivType Titling Heavy', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.steps {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 30px;
+    background-color: rgba(44, 53, 49, 0.78);
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    gap: 15px;
+    width: 220px;
+    transition: all 0.3s ease;
+}
+
+.step-icon{
+    width: 162px;
+    height: 162px;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(44, 53, 49, 0.9);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .steps-section {
+        padding: 50px 20px;
+    }
+    
+    .steps {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .step {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.cta-button { 
+    display: block;
+    margin: 20px auto; 
+    padding: 20px 40px;
+    font-family: 'KyivType Titling', 'Medium2';
+    background-color: #FFCB9A; 
+    color: #133E45; 
+    font-size: 25px;
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer; 
+}
+
+.bottom-block {
+    position: relative; /* Для позиционирования псевдоэлемента */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 130px auto;
+    padding: 30px;
+    max-width: 1000px;
+    min-height: 200px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    font-family: 'KyivType Titling', 'Medium2';
+    font-size: 25px;
+    overflow: hidden; /* Обрезаем выходящие за границы элементы */
+}
+
+.bottom-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/космос.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5); /* Затемнение фона для лучшей читаемости текста */
+    z-index: -1; /* Отправляем фон под контент */
+}
+
+.block-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    z-index: 1; /* Поднимаем контент над фоном */
+}
+
+.block-img {
+    display: none; /* Скрываем оригинальное изображение, так как используем его как фон */
+}
+
+.block-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #ffffff;
+    text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Тень для текста */
+}
+
+.block-text p {
+    margin: 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.block-text p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FFCB9A;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .bottom-block {
+        margin: 80px auto;
+        padding: 20px;
+        min-height: 250px;
+    }
+    
+    .block-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+nav li a span {
+    font-size: 15px; 
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+/* Эффект при наведении */
+nav a:hover {
+    color: #00B7FF;
+}
+
+
+.horizontal-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.info-item {
+    position: relative; /* Родитель для абсолютного позиционирования */
+    display: inline-block;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.text-block {
+    position: absolute; /* Текст поверх изображения */
+    bottom: 1; /* Прижимаем к низу */
+    left: 0;
+    background-color: #2C3531;
+    opacity: 0.7;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%; /* На всю ширину родителя */
+    box-sizing: border-box; /* Учитывает padding в ширине */
+}
+
+.block-img{
+
+}
+
+.info-text {
+    color: #ffffff;
+    margin: 0; /* Убираем отступы у текста */
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+}
+.info-item img {
+    width: 350px;
+    height: 229px;
+}
+.news-title {
+    text-align:right;
+    margin: 10px auto;
+    width: 80%;
+    
+}
+.news {
+    margin: 0px 0;
+    padding-left: 300px;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.news-item {
+    background-color: #2C3531;
+    opacity: 70%;
+    padding: 10px;
+    border-top: 2px solid #ffffff; 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 10px auto;
+    width: 80%;
+    text-align: left;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 10px 10px; /* Внешние отступы (как в header) */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center; /* Выравнивание лого и ссылок по вертикали */
+    gap: 20px;
+    font-size: 24px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media img {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #D1E8E2;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Стили для логотипа с кругом */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid #D1E8E2;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
