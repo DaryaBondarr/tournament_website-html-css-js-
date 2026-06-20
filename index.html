@@ -16,7 +16,7 @@
         </a>
 
         <div class="toolbar">
-            <button class="toolbar-icon" type="button" aria-label="Уведомления">
+            <button class="toolbar-icon notification-toggle" type="button" aria-label="Уведомления">
                 <img src="images/icons8-уведомление-48.png" alt="">
             </button>
 
@@ -24,6 +24,12 @@
                 <img class="search-icon" src="images/icons8-лупа-48.png" alt="">
                 <input type="search" placeholder="поиск">
             </label>
+
+            <aside class="notifications-popup" id="notifications-popup" aria-hidden="true">
+                <div class="alert-card">??????????? ? ??????????????? ????? 24.10 ? 16:10</div>
+                <div class="alert-card">!! ???-?? ?????? ??? ????? !!</div>
+                <div class="alert-card">!! ??? ?????????? ? ??????? !!</div>
+            </aside>
         </div>
 
         <nav class="main-nav" aria-label="Основная навигация">
@@ -52,12 +58,6 @@
 
     <main class="page-home">
         <section class="hero">
-            <aside class="alerts-panel">
-                <div class="alert-card">Напоминание о запланированном матче 24.10 в 16:10</div>
-                <div class="alert-card">!! Кто-то принял ваш вызов !!</div>
-                <div class="alert-card">!! Вас пригласили в команду !!</div>
-            </aside>
-
             <div class="hero-copy">
                 <p class="hero-line hero-line-top">Играй локально,</p>
                 <p class="hero-line hero-line-bottom">Побеждай глобально!</p>
@@ -153,5 +153,37 @@
             <a href="#"><img src="images/youtube.jpg" alt="YouTube"></a>
         </div>
     </footer>
+
+    <script>
+        const notificationButton = document.querySelector('.notification-toggle');
+        const notificationPopup = document.querySelector('#notifications-popup');
+
+        if (notificationButton && notificationPopup) {
+            notificationButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isOpen = notificationPopup.classList.toggle('is-open');
+                notificationButton.setAttribute('aria-expanded', String(isOpen));
+                notificationPopup.setAttribute('aria-hidden', String(!isOpen));
+            });
+
+            notificationPopup.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            document.addEventListener('click', () => {
+                notificationPopup.classList.remove('is-open');
+                notificationButton.setAttribute('aria-expanded', 'false');
+                notificationPopup.setAttribute('aria-hidden', 'true');
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    notificationPopup.classList.remove('is-open');
+                    notificationButton.setAttribute('aria-expanded', 'false');
+                    notificationPopup.setAttribute('aria-hidden', 'true');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
