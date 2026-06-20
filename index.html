@@ -1,149 +1,157 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VECTOR | ЛОКАЛЬНЫЕ ТУРНИРЫ</title>
+    <title>VECTOR | Локальные турниры</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-       <div class="logo">
-    <div class="logo-circle">
-        <img src="images/logo_icon.jpg" alt="VECTOR Logo">
-    </div>
-    <span class="logo-text">VECTOR | <br>ЛОКАЛЬНЫЕ ТУРНИРЫ</span>
-</div>
-<div class="header-right">
-   <div class="notification-bell">
-            <img src="images/icons8-уведомление-48.png" alt="Уведомления" class="bell-icon">
-        </div>      
-    <div class="search-bar">
-    <input type="text" placeholder="Поиск">
-    <img src="images/icons8-лупа-48.png" alt="Поиск" class="search-icon">
-</div>
-</div>
-       <nav>
-    <ul>
-        <li>
-            <a href="index.html">
-                <img src="images/icons8-главная-48.png" alt="Главная" class="nav-icon">
+    <header class="topbar">
+        <a class="brand" href="index.html" aria-label="VECTOR Локальные турниры">
+            <span class="brand-mark">
+                <img src="images/logo_icon.jpg" alt="Логотип VECTOR">
+            </span>
+            <span class="brand-text">VECTOR |<br>ЛОКАЛЬНЫЕ ТУРНИРЫ</span>
+        </a>
+
+        <div class="toolbar">
+            <button class="toolbar-icon" type="button" aria-label="Уведомления">
+                <img src="images/icons8-уведомление-48.png" alt="">
+            </button>
+
+            <label class="search" aria-label="Поиск">
+                <img class="search-icon" src="images/icons8-лупа-48.png" alt="">
+                <input type="search" placeholder="поиск">
+            </label>
+        </div>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+            <a class="nav-link active" href="index.html">
+                <img src="images/icons8-главная-50.png" alt="">
                 <span>ГЛАВНАЯ</span>
             </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="images/icons8-рейтинг-48.png" alt="Статистика" class="nav-icon">
+            <a class="nav-link" href="#stat">
+                <img src="images/icons8-статистика-50.png" alt="">
                 <span>СТАТИСТИКА</span>
             </a>
-        </li>
-        <li>
-            <a href="tourney_choiceMap.html">
-                <img src="images/icons8-трофей-48.png" alt="Турниры" class="nav-icon">
+            <a class="nav-link" href="tourney_choiceMap.html">
+                <img src="images/icons8-трофей-48.png" alt="">
                 <span>ТУРНИРЫ</span>
             </a>
-        </li>
-        <li>
-            <a href="info.html">
-                <img src="images/icons8-информация-48.png" alt="Информация" class="nav-icon">
+            <a class="nav-link" href="info.html">
+                <img src="images/icons8-информация-50.png" alt="">
                 <span>ИНФОРМАЦИЯ</span>
             </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="images/icons8_пользователь_мужчина_в_кружке_48.png" alt="Профиль" class="nav-icon">
+            <a class="nav-link" href="anketa.html">
+                <img src="images/icons8_пользователь_мужчина_в_кружке_48.png" alt="">
                 <span>ПРОФИЛЬ</span>
             </a>
-        </li>
-    </ul>
-</nav>
+        </nav>
     </header>
-    <main>
-        <section class="slogan1">
-            <h1>Играй локально,</h1>
+
+    <main class="page-home">
+        <section class="hero">
+            <aside class="alerts-panel">
+                <div class="alert-card">Напоминание о запланированном матче 24.10 в 16:10</div>
+                <div class="alert-card">!! Кто-то принял ваш вызов !!</div>
+                <div class="alert-card">!! Вас пригласили в команду !!</div>
+            </aside>
+
+            <div class="hero-copy">
+                <p class="hero-line hero-line-top">Играй локально,</p>
+                <p class="hero-line hero-line-bottom">Побеждай глобально!</p>
+            </div>
+
+            <div class="ranks" id="stat">
+                <article class="rank-card">
+                    <div class="rank-emblem"><img src="images/Без имени-1.png" alt="Неофит"></div>
+                    <div class="rank-title">Ранг Неофит. I Дивизион</div>
+                </article>
+                <article class="rank-card">
+                    <div class="rank-emblem"><img src="images/Без имени-2.png" alt="Воин"></div>
+                    <div class="rank-title">Ранг Воин. II Дивизион</div>
+                </article>
+                <article class="rank-card">
+                    <div class="rank-emblem"><img src="images/Без имени-3.png" alt="Мародёр"></div>
+                    <div class="rank-title">Ранг Мародёр. III Дивизион</div>
+                </article>
+                <article class="rank-card">
+                    <div class="rank-emblem"><img src="images/Без имени-4.png" alt="Страж"></div>
+                    <div class="rank-title">Ранг Страж. IV Дивизион</div>
+                </article>
+            </div>
+
+            <a class="cta-button" href="tourney_choiceMap.html">ПРИНЯТЬ ВЫЗОВ</a>
         </section>
-        <section class="slogan2">
-            <h2>Побеждай глобально!</h2>
-        </section>
-        <section class="rankings">
-            <div class="rank">
-                <div class="rank-logo">
-                    <img src="images/Без имени-1.png" alt="Avatar1">
-                </div>
-                <div class="inner-rank">Ранг Неофит. I Дивизион</div>
-            </div>
-            <div class="rank">
-                <div class="rank-logo">
-                    <img src="images/Без имени-2.png" alt="Avatar1">
-                </div>
-                <div class="inner-rank">Ранг Воин. II Дивизион</div>
-            </div>
-            <div class="rank">
-                <div class="rank-logo">
-                    <img src="images/Без имени-3.png" alt="Avatar1">
-                </div>
-                <div class="inner-rank">Ранг Мародёр. III Дивизион</div>
-            </div>
-            <div class="rank">
-                <div class="rank-logo">
-                    <img src="images/Без имени-4.png" alt="Avatar1">
-                </div>
-                <div class="inner-rank">Ранг Страж. IV Дивизион</div>
-            </div>
-        </section>
-        <button class="cta-button">ПРИНЯТЬ ВЫЗОВ</button>
-        <section class="horizontal-blocks">
-            <div class="info">
-                <div class="info-item">
-                    <img src="images/к2.jpg" alt="О нас">
-                    <div class="text-block">
-                    <div class="info-text">О нас</div>
+
+        <section class="content-grid">
+            <div class="feature-cards">
+                <article class="feature-card">
+                    <img class="feature-image" src="images/к2.jpg" alt="О нас">
+                    <div class="feature-caption">
+                        <img src="images/logo_icon.jpg" alt="">
+                        <span>О нас</span>
                     </div>
-                </div>
-                <div class="info-item">
-                    <img src="images/rating.jpg" alt="Система рейтинга">
-                    <div class="text-block">
-                    <div class="info-text">Система рейтинга</div>
+                </article>
+
+                <article class="feature-card">
+                    <img class="feature-image" src="images/rating.jpg" alt="Система рейтинга">
+                    <div class="feature-caption">
+                        <img src="images/logo_icon.jpg" alt="">
+                        <span>Система рейтинга</span>
                     </div>
-                </div>
+                </article>
             </div>
-    
-            <div class="news">
-                <h2 class="news-title">Новости</h2>
-                <div class="news-item">
-                    <p>Лига Легенд поднялась в рейтинге на 5 строк среди самых популярных игр</p>
-                    <a href="#">Читать статью</a>
-                </div>
-                <div class="news-item">
-                    <p>Лига Легенд поднялась в рейтинге на 5 строк среди самых популярных игр</p>
-                    <a href="#">Читать статью</a>
-                </div>
-                <div class="news-item">
-                    <p>Лига Легенд поднялась в рейтинге на 5 строк среди самых популярных игр</p>
-                    <a href="#">Читать статью</a>
-                </div>
-            </div>
+
+            <section class="news-block" aria-labelledby="news-title">
+                <h2 id="news-title">Новости</h2>
+
+                <article class="news-card">
+                    <div class="news-copy">
+                        <p>Лига Легенд поднялась в рейтинге на 5 строк среди самых популярных игр</p>
+                        <a href="info.html">Читать статью</a>
+                    </div>
+                    <img src="images/новость2.png" alt="Новость League of Legends">
+                </article>
+
+                <article class="news-card">
+                    <div class="news-copy">
+                        <p>Новые дивизионы и обновлённые правила матчей уже доступны на платформе</p>
+                        <a href="info.html">Читать статью</a>
+                    </div>
+                    <img src="images/тфт.png" alt="Новость о рангах">
+                </article>
+
+                <article class="news-card">
+                    <div class="news-copy">
+                        <p>Система подбора соперников теперь учитывает личную серию побед игрока</p>
+                        <a href="info.html">Читать статью</a>
+                    </div>
+                    <img src="images/арам.png" alt="Новость о матчмейкинге">
+                </article>
+            </section>
         </section>
     </main>
-   <footer>
-    <div class="footer-container">
+
+    <footer class="site-footer">
         <div class="footer-links">
-            <div class="logo">
-                <div class="logo-circle">
-                    <img src="images/logo_icon.jpg" alt="VECTOR Logo">
-                </div>
-            </div>
-            <a href="#">Условия использования  | </a>
-            <a href="#">Тех. поддержка  | </a>
+            <a class="footer-brand" href="index.html">
+                <span class="brand-mark">
+                    <img src="images/logo_icon.jpg" alt="Логотип VECTOR">
+                </span>
+            </a>
+            <a href="#">Условия использования</a>
+            <a href="#">Тех. поддержка</a>
             <a href="#">Реклама</a>
         </div>
+
         <div class="social-media">
-            <a href="#"><img src="images/telega.jpg" alt="Telegram"></a>
             <a href="https://vk.com/xellkart" target="_blank" rel="noopener noreferrer"><img src="images/vk.jpg" alt="VK"></a>
+            <a href="#"><img src="images/telega.jpg" alt="Telegram"></a>
             <a href="#"><img src="images/ds.jpg" alt="Discord"></a>
             <a href="#"><img src="images/youtube.jpg" alt="YouTube"></a>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
